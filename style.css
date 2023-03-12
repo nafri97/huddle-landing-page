@@ -1,0 +1,158 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url(images/bg-desktop.svg),hsl(257, 40%, 49%);
+    position: relative;
+}
+
+/* =========== images attributes below ============== */
+.demo{
+    position: absolute;
+    right: 50%;
+    margin-top: 150px;
+    width: 44%;
+}
+
+.logo{
+    float: left;
+    width: 200px;
+    margin: 40px 80px;
+}
+.twitter, .ig, .fb{
+    border-radius: 16px;
+    background-color: white;
+    height: 32px;
+    width: auto;
+    margin: 10px;
+}
+
+.twitter:hover, .ig:hover, .fb:hover{
+    background-color: hsl(300, 69%, 71%);
+}
+
+button{
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+button:hover{
+    background-color:hsl(300, 69%, 71%);
+    border: none;
+    color: white;
+}
+
+/* ==============images attributes above ============== */
+.container{
+    position: absolute;
+    left: 50%;
+    margin: 170px 85px;
+}
+.container h1{
+    font-weight: 600;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.container p{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    margin: 30px 0px;
+}
+
+.socmed{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 85px;
+    gap: 20px;
+}
+
+
+.attribution { 
+    font-size: 10px;
+    text-align: right;
+    position: relative; 
+    writing-mode: vertical-rl; 
+    float: right;
+    transform: rotate(180deg);
+    font-family: 'Courier New', Courier, monospace;
+}
+.attribution a{
+    font: inherit
+}
+
+/* =============== responsive screen ============== */
+@media screen and (max-width:640px) {
+    body{background: url(images/bg-mobile.svg),hsl(257, 40%, 49%)}
+    .demo{
+        right: 0;
+        margin: 27vw 5% 0;
+        width: 90%;
+        margin-left: 25%;
+    }
+    .logo{
+        float: left;
+        width: 40%;
+        margin: 7vw 10%;
+    }
+    .container{
+        margin: 100vw 0;
+        width: 80%;
+        left: 0%;
+        flex-wrap: wrap;
+        padding: 10%;
+    }
+    .container h1{
+        font-size: max(6.5vw, 20px);
+        text-align: center;
+        padding-right: 0;
+
+    }
+    .container p{
+        font-size: max(4vw, 12px);
+        margin: 30px 0px;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .socmed{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+    }
+    .socmed p{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        border-radius: 10vw;
+        width: 80vw;
+        height: 10vw;
+        text-align: center;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    .attribution { display: none;}
+}
+@media screen and (max-width:240px) {
+    .socmed{flex-direction: column;}
+    .socmed div{
+        display: flex;
+        flex-direction: column;
+    }
+}
